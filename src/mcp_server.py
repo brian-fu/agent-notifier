@@ -32,7 +32,7 @@ def notify_phone(
     if not summary or len(summary) > 500:
         raise ValueError("Summary must contain 1 to 500 characters")
 
-    title = "Codex task finished" if event == "task_finished" else "Codex needs attention"
+    title = "Task finished" if event == "task_finished" else "Needs attention"
     send_message(f"{title}\n{summary}")
     return "Phone notification sent."
 
