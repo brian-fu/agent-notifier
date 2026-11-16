@@ -10,7 +10,7 @@ from urllib.request import Request, urlopen
 from dotenv import load_dotenv
 
 
-load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+load_dotenv(Path(__file__).resolve().parent / ".env")
 
 
 def telegram(method: str, payload: dict) -> dict | list:

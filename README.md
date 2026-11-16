@@ -16,9 +16,9 @@ meaningful completed work or a request that needs your attention.
    .venv/bin/python -m pip install -e .
    ```
 
-4. Run `.venv/bin/python src/telegram_notify.py chat-id`, then put the returned
+4. Run `.venv/bin/python telegram_notify.py chat-id`, then put the returned
    number in `TELEGRAM_CHAT_ID` in `.env`.
-5. Run `.venv/bin/python src/telegram_notify.py send "Agent Notifier test"`.
+5. Run `.venv/bin/python telegram_notify.py send "Agent Notifier test"`.
 
 The Python code loads `.env` itself, so you do not need to source it in your
 shell. An already-exported environment variable takes precedence over `.env`.
@@ -30,7 +30,7 @@ absolute command below. This works with MCP-capable clients, including Codex
 and Claude, that support local STDIO servers.
 
 ```sh
-/absolute/path/to/agent-notifier/.venv/bin/python /absolute/path/to/agent-notifier/src/mcp_server.py
+/absolute/path/to/agent-notifier/.venv/bin/python /absolute/path/to/agent-notifier/mcp_server.py
 ```
 
 ### Codex example
